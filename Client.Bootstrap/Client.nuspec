@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>Client</id>
+    <version>1.2.0</version>
+    <authors>Dane Vinson</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Test client application for prototyping of Squirrel deployments.</description>
+  </metadata>
+  <files>
+    <file src="C:\Users\dvinson\Documents\GitHub\SquirrelPrototype\Client.Bootstrap\bin\Release\Client.Bootstrap.exe" target="lib\net45\Client.Bootstrap.exe" />
+    <file src="C:\Users\dvinson\Documents\GitHub\SquirrelPrototype\Client.Bootstrap\bin\Release\Client.Bootstrap.exe.config" target="lib\net45\Client.Bootstrap.exe.config" />
+    <file src="C:\Users\dvinson\Documents\GitHub\SquirrelPrototype\Client.Bootstrap\bin\Release\Client.WinForm.exe" target="lib\net45\Client.WinForm.exe" />
+    <file src="C:\Users\dvinson\Documents\GitHub\SquirrelPrototype\Client.Bootstrap\bin\Release\Client.WinForm.exe.config" target="lib\net45\Client.WinForm.exe.config" />
+    <file src="C:\Users\dvinson\Documents\GitHub\SquirrelPrototype\Client.Bootstrap\bin\Release\DeltaCompressionDotNet.dll" target="lib\net45\DeltaCompressionDotNet.dll" />
+    <file src="C:\Users\dvinson\Documents\GitHub\SquirrelPrototype\Client.Bootstrap\bin\Release\DeltaCompressionDotNet.MsDelta.dll" target="lib\net45\DeltaCompressionDotNet.MsDelta.dll" />
+    <file src="C:\Users\dvinson\Documents\GitHub\SquirrelPrototype\Client.Bootstrap\bin\Release\DeltaCompressionDotNet.PatchApi.dll" target="lib\net45\DeltaCompressionDotNet.PatchApi.dll" />
+    <file src="C:\Users\dvinson\Documents\GitHub\SquirrelPrototype\Client.Bootstrap\bin\Release\Mono.Cecil.dll" target="lib\net45\Mono.Cecil.dll" />
+    <file src="C:\Users\dvinson\Documents\GitHub\SquirrelPrototype\Client.Bootstrap\bin\Release\Mono.Cecil.Mdb.dll" target="lib\net45\Mono.Cecil.Mdb.dll" />
+    <file src="C:\Users\dvinson\Documents\GitHub\SquirrelPrototype\Client.Bootstrap\bin\Release\Mono.Cecil.Pdb.dll" target="lib\net45\Mono.Cecil.Pdb.dll" />
+    <file src="C:\Users\dvinson\Documents\GitHub\SquirrelPrototype\Client.Bootstrap\bin\Release\Mono.Cecil.Rocks.dll" target="lib\net45\Mono.Cecil.Rocks.dll" />
+    <file src="C:\Users\dvinson\Documents\GitHub\SquirrelPrototype\Client.Bootstrap\bin\Release\Newtonsoft.Json.dll" target="lib\net45\Newtonsoft.Json.dll" />
+    <file src="C:\Users\dvinson\Documents\GitHub\SquirrelPrototype\Client.Bootstrap\bin\Release\NuGet.Squirrel.dll" target="lib\net45\NuGet.Squirrel.dll" />
+    <file src="C:\Users\dvinson\Documents\GitHub\SquirrelPrototype\Client.Bootstrap\bin\Release\SharpCompress.dll" target="lib\net45\SharpCompress.dll" />
+    <file src="C:\Users\dvinson\Documents\GitHub\SquirrelPrototype\Client.Bootstrap\bin\Release\Splat.dll" target="lib\net45\Splat.dll" />
+    <file src="C:\Users\dvinson\Documents\GitHub\SquirrelPrototype\Client.Bootstrap\bin\Release\Squirrel.dll" target="lib\net45\Squirrel.dll" />
+  </files>
+</package>

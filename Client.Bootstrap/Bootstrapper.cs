@@ -1,46 +1,30 @@
 ﻿using Newtonsoft.Json;
+using Squirrel;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+using System.Configuration;
 using System.Diagnostics;
-using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Client.Bootstrap
 {
-    public partial class Splash : Form
+    internal class Bootstrapper
     {
-        public Splash()
+        public void CheckAndApplyUpdate()
         {
-            InitializeComponent();
-        }
-
-
-        protected override void OnLoad(EventArgs e)
-        {
-            base.OnLoad(e);
-            UpdateAvailable = CheckForUpdate();
-        }
-
-        protected override void OnShown(EventArgs e)
-        {
-            base.OnShown(e);
-
-            if (UpdateAvailable) { InstallUpdate(); }
-            StartClient();
-        }
-
-
-        private bool CheckForUpdate()
-        {
-            return false;
+            using (var updateManager = new UpdateManager(ReleasesUri))
+            {
+                var updateInfo = Task.Run(() => updateManager.CheckForUpdate()).Result;
+                if (updateInfo.ReleasesToApply != null && updateInfo.ReleasesToApply.Count > 0)
+                {
+                    var releaseEntry = Task.Run(() => updateManager.UpdateApp()).Result;
+                }
+            }
         }
 
         private Version GetVersionFromAppFolder(DirectoryInfo directory)
@@ -53,20 +37,16 @@ namespace Client.Bootstrap
             else { return new Version(0, 0, 0, 0); }
         }
 
-        private void InstallUpdate()
-        {
-        }
-
-        private void StartClient()
+        public void StartClient()
         {
             // Find the latest client executable
             var directories = new SortedDictionary<Version, string>();
             new FileInfo(new Uri(Assembly.GetExecutingAssembly().CodeBase).LocalPath)
-                    .Directory
-                    .Parent
-                    .GetDirectories(SquirrelAppDirectoriesSearchPattern)
-                    .ToList()
-                    .ForEach(d => { directories.Add(GetVersionFromAppFolder(d), d.FullName); });
+                                .Directory
+                                .Parent
+                                .GetDirectories(SquirrelAppDirectoriesSearchPattern)
+                                .ToList()
+                                .ForEach(d => { directories.Add(GetVersionFromAppFolder(d), d.FullName); });
             string latestClient = Directory.GetFiles(directories.Last().Value, ClientExeName).FirstOrDefault();
 
             // Always show splash for a short time
@@ -83,6 +63,7 @@ namespace Client.Bootstrap
 
 
         private static readonly TimeSpan MinimumSplashTimeSpan = TimeSpan.FromMilliseconds(500);
+        private readonly string ReleasesUri = ConfigurationManager.AppSettings["ReleasesUri"];
         private readonly DateTime StartTime = DateTime.UtcNow;
 
         private const string ClientExeName = "Client.WinForm.exe";
