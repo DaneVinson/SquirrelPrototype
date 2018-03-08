@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>WinForm3</id>
+    <version>1.0.0</version>
+    <authors>Dane Vinson</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Squirrel deployment test client 3.</description>
+  </metadata>
+  <files>
+    <file src=".\bin\Debug\Client.WinForm3.exe" target="lib\net45\Client.WinForm3.exe" />
+    <file src=".\bin\Debug\Client.WinForm3.exe.config" target="lib\net45\Client.WinForm3.exe.config" />
+    <file src=".\bin\Debug\DeltaCompressionDotNet.dll" target="lib\net45\DeltaCompressionDotNet.dll" />
+    <file src=".\bin\Debug\DeltaCompressionDotNet.MsDelta.dll" target="lib\net45\DeltaCompressionDotNet.MsDelta.dll" />
+    <file src=".\bin\Debug\DeltaCompressionDotNet.PatchApi.dll" target="lib\net45\DeltaCompressionDotNet.PatchApi.dll" />
+    <file src=".\bin\Debug\Mono.Cecil.dll" target="lib\net45\Mono.Cecil.dll" />
+    <file src=".\bin\Debug\NuGet.Squirrel.dll" target="lib\net45\NuGet.Squirrel.dll" />
+    <file src=".\bin\Debug\SharpCompress.dll" target="lib\net45\SharpCompress.dll" />
+    <file src=".\bin\Debug\Splat.dll" target="lib\net45\Splat.dll" />
+    <file src=".\bin\Debug\Squirrel.dll" target="lib\net45\Squirrel.dll" />
+  </files>
+</package>

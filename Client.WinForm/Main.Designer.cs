@@ -34,30 +34,33 @@
             // 
             // theButton
             // 
-            this.theButton.Location = new System.Drawing.Point(49, 46);
+            this.theButton.Location = new System.Drawing.Point(24, 24);
+            this.theButton.Margin = new System.Windows.Forms.Padding(2);
             this.theButton.Name = "theButton";
-            this.theButton.Size = new System.Drawing.Size(160, 77);
+            this.theButton.Size = new System.Drawing.Size(80, 40);
             this.theButton.TabIndex = 0;
             this.theButton.Text = "The Button!";
             this.theButton.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // messageTextBox
             // 
-            this.messageTextBox.Location = new System.Drawing.Point(49, 149);
+            this.messageTextBox.Location = new System.Drawing.Point(24, 77);
+            this.messageTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.messageTextBox.Multiline = true;
-            this.messageTextBox.Name = "textBox1";
+            this.messageTextBox.Name = "messageTextBox";
             this.messageTextBox.ReadOnly = true;
-            this.messageTextBox.Size = new System.Drawing.Size(722, 293);
+            this.messageTextBox.Size = new System.Drawing.Size(363, 154);
             this.messageTextBox.TabIndex = 1;
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(815, 491);
+            this.BackColor = System.Drawing.Color.Lime;
+            this.ClientSize = new System.Drawing.Size(408, 255);
             this.Controls.Add(this.messageTextBox);
             this.Controls.Add(this.theButton);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Main";
             this.Text = "TheApp";
             this.ResumeLayout(false);

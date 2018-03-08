@@ -13,11 +13,42 @@ namespace AdminConsole
 {
     class Program
     {
+        private static readonly DirectoryInfo InstallDirectory = new DirectoryInfo(@"C:\temp\deployment");
+
         static void Main(string[] args)
         {
             try
             {
-                UpdateNuspec("1.0.0");
+                var packagesDirectory = InstallDirectory.GetDirectories("packages", SearchOption.TopDirectoryOnly).FirstOrDefault();
+                if (packagesDirectory == null) { return; }
+
+                var releasesFile = packagesDirectory.GetFiles("RELEASES", SearchOption.TopDirectoryOnly).FirstOrDefault();
+                if (releasesFile == null) { return; }
+
+                List<string> packages = new List<string>();
+                string line;
+                using (var reader = new StreamReader(releasesFile.FullName))
+                {
+                    while((line = reader.ReadLine()) != null)
+                    {
+                        var parts = line.Split(' ');
+                        if (parts.Length < 2) { continue; }
+                        packages.Add(parts[1]);
+                    }
+                }
+
+                int deleteCount = packages.Count - 4;
+                int count = 0;
+                packages.ForEach(p =>
+                {
+                    if (count < deleteCount)
+                    {
+                        File.Delete(Path.Combine(packagesDirectory.FullName, p));
+                        count++;
+                    }
+                });
+
+                //UpdateNuspec("1.0.0");
             }
             catch (Exception ex)
             {

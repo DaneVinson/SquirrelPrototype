@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>WinForm2</id>
+    <version>1.2.0</version>
+    <authors>Dane Vinson</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Squirrel deployment test client 2.</description>
+  </metadata>
+  <files>
+    <file src="C:\Users\dvinson\Documents\GitHub\SquirrelPrototype\Client.WinForm2\bin\Debug\Client.WinForm2.exe" target="lib\net45\Client.WinForm2.exe" />
+    <file src="C:\Users\dvinson\Documents\GitHub\SquirrelPrototype\Client.WinForm2\bin\Debug\Client.WinForm2.exe.config" target="lib\net45\Client.WinForm2.exe.config" />
+    <file src="C:\Users\dvinson\Documents\GitHub\SquirrelPrototype\Client.WinForm2\bin\Debug\DeltaCompressionDotNet.dll" target="lib\net45\DeltaCompressionDotNet.dll" />
+    <file src="C:\Users\dvinson\Documents\GitHub\SquirrelPrototype\Client.WinForm2\bin\Debug\DeltaCompressionDotNet.MsDelta.dll" target="lib\net45\DeltaCompressionDotNet.MsDelta.dll" />
+    <file src="C:\Users\dvinson\Documents\GitHub\SquirrelPrototype\Client.WinForm2\bin\Debug\DeltaCompressionDotNet.PatchApi.dll" target="lib\net45\DeltaCompressionDotNet.PatchApi.dll" />
+    <file src="C:\Users\dvinson\Documents\GitHub\SquirrelPrototype\Client.WinForm2\bin\Debug\Mono.Cecil.dll" target="lib\net45\Mono.Cecil.dll" />
+    <file src="C:\Users\dvinson\Documents\GitHub\SquirrelPrototype\Client.WinForm2\bin\Debug\Mono.Cecil.Mdb.dll" target="lib\net45\Mono.Cecil.Mdb.dll" />
+    <file src="C:\Users\dvinson\Documents\GitHub\SquirrelPrototype\Client.WinForm2\bin\Debug\Mono.Cecil.Pdb.dll" target="lib\net45\Mono.Cecil.Pdb.dll" />
+    <file src="C:\Users\dvinson\Documents\GitHub\SquirrelPrototype\Client.WinForm2\bin\Debug\Mono.Cecil.Rocks.dll" target="lib\net45\Mono.Cecil.Rocks.dll" />
+    <file src="C:\Users\dvinson\Documents\GitHub\SquirrelPrototype\Client.WinForm2\bin\Debug\Newtonsoft.Json.dll" target="lib\net45\Newtonsoft.Json.dll" />
+    <file src="C:\Users\dvinson\Documents\GitHub\SquirrelPrototype\Client.WinForm2\bin\Debug\NuGet.Squirrel.dll" target="lib\net45\NuGet.Squirrel.dll" />
+    <file src="C:\Users\dvinson\Documents\GitHub\SquirrelPrototype\Client.WinForm2\bin\Debug\SharpCompress.dll" target="lib\net45\SharpCompress.dll" />
+    <file src="C:\Users\dvinson\Documents\GitHub\SquirrelPrototype\Client.WinForm2\bin\Debug\Splat.dll" target="lib\net45\Splat.dll" />
+    <file src="C:\Users\dvinson\Documents\GitHub\SquirrelPrototype\Client.WinForm2\bin\Debug\Squirrel.dll" target="lib\net45\Squirrel.dll" />
+  </files>
+</package>
